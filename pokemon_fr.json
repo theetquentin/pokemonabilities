@@ -1,0 +1,1066 @@
+{
+    "Absentéisme": [
+      "truant",
+      "https://pokeapi.co/api/v2/ability/54/"
+    ],
+    "Absorbe-Eau": [
+      "water-absorb",
+      "https://pokeapi.co/api/v2/ability/11/"
+    ],
+    "Absorbe-Volt": [
+      "volt-absorb",
+      "https://pokeapi.co/api/v2/ability/10/"
+    ],
+    "Acharné": [
+      "defiant",
+      "https://pokeapi.co/api/v2/ability/128/"
+    ],
+    "Adaptabilité": [
+      "adaptability",
+      "https://pokeapi.co/api/v2/ability/91/"
+    ],
+    "Agitation": [
+      "hustle",
+      "https://pokeapi.co/api/v2/ability/55/"
+    ],
+    "Ailes Bourrasque": [
+      "gale-wings",
+      "https://pokeapi.co/api/v2/ability/177/"
+    ],
+    "Air Lock": [
+      "air-lock",
+      "https://pokeapi.co/api/v2/ability/76/"
+    ],
+    "Alerte Neige": [
+      "snow-warning",
+      "https://pokeapi.co/api/v2/ability/117/"
+    ],
+    "Amour Filial": [
+      "parental-bond",
+      "https://pokeapi.co/api/v2/ability/185/"
+    ],
+    "Analyste": [
+      "analytic",
+      "https://pokeapi.co/api/v2/ability/148/"
+    ],
+    "Animacœur": [
+      "soul-heart",
+      "https://pokeapi.co/api/v2/ability/220/"
+    ],
+    "Annule Garde": [
+      "no-guard",
+      "https://pokeapi.co/api/v2/ability/99/"
+    ],
+    "Anti-Bruit": [
+      "soundproof",
+      "https://pokeapi.co/api/v2/ability/43/"
+    ],
+    "Anticipation": [
+      "anticipation",
+      "https://pokeapi.co/api/v2/ability/107/"
+    ],
+    "Aquabulle": [
+      "water-bubble",
+      "https://pokeapi.co/api/v2/ability/199/"
+    ],
+    "Armumagma": [
+      "magma-armor",
+      "https://pokeapi.co/api/v2/ability/40/"
+    ],
+    "Armurbaston": [
+      "battle-armor",
+      "https://pokeapi.co/api/v2/ability/4/"
+    ],
+    "Armure Miroir": [
+      "mirror-armor",
+      "https://pokeapi.co/api/v2/ability/240/"
+    ],
+    "Armurouillée": [
+      "weak-armor",
+      "https://pokeapi.co/api/v2/ability/133/"
+    ],
+    "Aroma-Voile": [
+      "aroma-veil",
+      "https://pokeapi.co/api/v2/ability/165/"
+    ],
+    "Attention": [
+      "inner-focus",
+      "https://pokeapi.co/api/v2/ability/39/"
+    ],
+    "Aura Féérique": [
+      "fairy-aura",
+      "https://pokeapi.co/api/v2/ability/187/"
+    ],
+    "Aura Inversée": [
+      "aura-break",
+      "https://pokeapi.co/api/v2/ability/188/"
+    ],
+    "Aura Ténébreuse": [
+      "dark-aura",
+      "https://pokeapi.co/api/v2/ability/186/"
+    ],
+    "Baigne Sable": [
+      "sand-rush",
+      "https://pokeapi.co/api/v2/ability/146/"
+    ],
+    "Bajoues": [
+      "cheek-pouch",
+      "https://pokeapi.co/api/v2/ability/167/"
+    ],
+    "Banc": [
+      "schooling",
+      "https://pokeapi.co/api/v2/ability/208/"
+    ],
+    "Battant": [
+      "competitive",
+      "https://pokeapi.co/api/v2/ability/172/"
+    ],
+    "Batterie": [
+      "battery",
+      "https://pokeapi.co/api/v2/ability/217/"
+    ],
+    "Benêt": [
+      "oblivious",
+      "https://pokeapi.co/api/v2/ability/12/"
+    ],
+    "Blanche Ruade": [
+      "chilling-neigh",
+      "https://pokeapi.co/api/v2/ability/264/"
+    ],
+    "Boom Final": [
+      "aftermath",
+      "https://pokeapi.co/api/v2/ability/106/"
+    ],
+    "Boost Acier": [
+      "steely-spirit",
+      "https://pokeapi.co/api/v2/ability/252/"
+    ],
+    "Boost Chimère": [
+      "beast-boost",
+      "https://pokeapi.co/api/v2/ability/224/"
+    ],
+    "Bouclier-Carcan": [
+      "shields-down",
+      "https://pokeapi.co/api/v2/ability/197/"
+    ],
+    "Boule de Poils": [
+      "fluffy",
+      "https://pokeapi.co/api/v2/ability/218/"
+    ],
+    "Brasier": [
+      "blaze",
+      "https://pokeapi.co/api/v2/ability/66/"
+    ],
+    "Breuvage Suspect": [
+      "curious-medicine",
+      "https://pokeapi.co/api/v2/ability/261/"
+    ],
+    "Brise Moule": [
+      "mold-breaker",
+      "https://pokeapi.co/api/v2/ability/104/"
+    ],
+    "Brise-Barrière": [
+      "screen-cleaner",
+      "https://pokeapi.co/api/v2/ability/251/"
+    ],
+    "Calque": [
+      "trace",
+      "https://pokeapi.co/api/v2/ability/36/"
+    ],
+    "Cercle d’Énergie": [
+      "power-spot",
+      "https://pokeapi.co/api/v2/ability/249/"
+    ],
+    "Chanceux": [
+      "super-luck",
+      "https://pokeapi.co/api/v2/ability/105/"
+    ],
+    "Chasse-Neige": [
+      "slush-rush",
+      "https://pokeapi.co/api/v2/ability/202/"
+    ],
+    "Cherche Miel": [
+      "honey-gather",
+      "https://pokeapi.co/api/v2/ability/118/"
+    ],
+    "Chlorophylle": [
+      "chlorophyll",
+      "https://pokeapi.co/api/v2/ability/34/"
+    ],
+    "Ciel Gris": [
+      "cloud-nine",
+      "https://pokeapi.co/api/v2/ability/13/"
+    ],
+    "Coloforce": [
+      "huge-power",
+      "https://pokeapi.co/api/v2/ability/37/"
+    ],
+    "Colérique": [
+      "anger-point",
+      "https://pokeapi.co/api/v2/ability/83/"
+    ],
+    "Contestation": [
+      "contrary",
+      "https://pokeapi.co/api/v2/ability/126/"
+    ],
+    "Coque Armure": [
+      "shell-armor",
+      "https://pokeapi.co/api/v2/ability/75/"
+    ],
+    "Corps Ardent": [
+      "flame-body",
+      "https://pokeapi.co/api/v2/ability/49/"
+    ],
+    "Corps Coloré": [
+      "dazzling",
+      "https://pokeapi.co/api/v2/ability/219/"
+    ],
+    "Corps Condamné": [
+      "perish-body",
+      "https://pokeapi.co/api/v2/ability/253/"
+    ],
+    "Corps Gel": [
+      "ice-body",
+      "https://pokeapi.co/api/v2/ability/115/"
+    ],
+    "Corps Maudit": [
+      "cursed-body",
+      "https://pokeapi.co/api/v2/ability/130/"
+    ],
+    "Corps Sain": [
+      "clear-body",
+      "https://pokeapi.co/api/v2/ability/29/"
+    ],
+    "Corrosion": [
+      "corrosion",
+      "https://pokeapi.co/api/v2/ability/212/"
+    ],
+    "Crachin": [
+      "drizzle",
+      "https://pokeapi.co/api/v2/ability/2/"
+    ],
+    "Cran": [
+      "guts",
+      "https://pokeapi.co/api/v2/ability/62/"
+    ],
+    "Cruauté": [
+      "merciless",
+      "https://pokeapi.co/api/v2/ability/196/"
+    ],
+    "Créa-Brume": [
+      "misty-surge",
+      "https://pokeapi.co/api/v2/ability/228/"
+    ],
+    "Créa-Herbe": [
+      "grassy-surge",
+      "https://pokeapi.co/api/v2/ability/229/"
+    ],
+    "Créa-Psy": [
+      "psychic-surge",
+      "https://pokeapi.co/api/v2/ability/227/"
+    ],
+    "Créa-Élec": [
+      "electric-surge",
+      "https://pokeapi.co/api/v2/ability/226/"
+    ],
+    "Cuvette": [
+      "rain-dish",
+      "https://pokeapi.co/api/v2/ability/44/"
+    ],
+    "Cérébro-Force": [
+      "neuroforce",
+      "https://pokeapi.co/api/v2/ability/233/"
+    ],
+    "Cœur Noble": [
+      "justified",
+      "https://pokeapi.co/api/v2/ability/154/"
+    ],
+    "Cœur Soin": [
+      "healer",
+      "https://pokeapi.co/api/v2/ability/131/"
+    ],
+    "Cœur de Coq": [
+      "big-pecks",
+      "https://pokeapi.co/api/v2/ability/145/"
+    ],
+    "Danseuse": [
+      "dancer",
+      "https://pokeapi.co/api/v2/ability/216/"
+    ],
+    "Dent de Dragon": [
+      "dragons-maw",
+      "https://pokeapi.co/api/v2/ability/263/"
+    ],
+    "Don Floral": [
+      "flower-gift",
+      "https://pokeapi.co/api/v2/ability/122/"
+    ],
+    "Dracolère": [
+      "berserk",
+      "https://pokeapi.co/api/v2/ability/201/"
+    ],
+    "Début Calme": [
+      "slow-start",
+      "https://pokeapi.co/api/v2/ability/112/"
+    ],
+    "Déclic Fringale": [
+      "hunger-switch",
+      "https://pokeapi.co/api/v2/ability/258/"
+    ],
+    "Déclic Tactique": [
+      "stance-change",
+      "https://pokeapi.co/api/v2/ability/176/"
+    ],
+    "Défaitiste": [
+      "defeatist",
+      "https://pokeapi.co/api/v2/ability/129/"
+    ],
+    "Dégobage": [
+      "gulp-missile",
+      "https://pokeapi.co/api/v2/ability/241/"
+    ],
+    "Délestage": [
+      "unburden",
+      "https://pokeapi.co/api/v2/ability/84/"
+    ],
+    "Effilochage": [
+      "cotton-down",
+      "https://pokeapi.co/api/v2/ability/238/"
+    ],
+    "Endurance": [
+      "stamina",
+      "https://pokeapi.co/api/v2/ability/192/"
+    ],
+    "Engrais": [
+      "overgrow",
+      "https://pokeapi.co/api/v2/ability/65/"
+    ],
+    "Entêtement": [
+      "gorilla-tactics",
+      "https://pokeapi.co/api/v2/ability/255/"
+    ],
+    "Envelocape": [
+      "overcoat",
+      "https://pokeapi.co/api/v2/ability/142/"
+    ],
+    "Escampette": [
+      "wimp-out",
+      "https://pokeapi.co/api/v2/ability/193/"
+    ],
+    "Esprit Vital": [
+      "vital-spirit",
+      "https://pokeapi.co/api/v2/ability/72/"
+    ],
+    "Essaim": [
+      "swarm",
+      "https://pokeapi.co/api/v2/ability/68/"
+    ],
+    "Expert Acier": [
+      "steelworker",
+      "https://pokeapi.co/api/v2/ability/200/"
+    ],
+    "Expuls’Organes": [
+      "innards-out",
+      "https://pokeapi.co/api/v2/ability/215/"
+    ],
+    "Expul’Sable": [
+      "sand-spit",
+      "https://pokeapi.co/api/v2/ability/245/"
+    ],
+    "Fantômasque": [
+      "disguise",
+      "https://pokeapi.co/api/v2/ability/209/"
+    ],
+    "Farceur": [
+      "prankster",
+      "https://pokeapi.co/api/v2/ability/158/"
+    ],
+    "Fermeté": [
+      "sturdy",
+      "https://pokeapi.co/api/v2/ability/5/"
+    ],
+    "Feuille Garde": [
+      "leaf-guard",
+      "https://pokeapi.co/api/v2/ability/102/"
+    ],
+    "Filature": [
+      "stakeout",
+      "https://pokeapi.co/api/v2/ability/198/"
+    ],
+    "Filtre": [
+      "filter",
+      "https://pokeapi.co/api/v2/ability/111/"
+    ],
+    "Flora-Voile": [
+      "flower-veil",
+      "https://pokeapi.co/api/v2/ability/166/"
+    ],
+    "Force Pure": [
+      "pure-power",
+      "https://pokeapi.co/api/v2/ability/74/"
+    ],
+    "Force Sable": [
+      "sand-force",
+      "https://pokeapi.co/api/v2/ability/159/"
+    ],
+    "Force Soleil": [
+      "solar-power",
+      "https://pokeapi.co/api/v2/ability/94/"
+    ],
+    "Fouille": [
+      "frisk",
+      "https://pokeapi.co/api/v2/ability/119/"
+    ],
+    "Frein": [
+      "stall",
+      "https://pokeapi.co/api/v2/ability/100/"
+    ],
+    "Fuite": [
+      "run-away",
+      "https://pokeapi.co/api/v2/ability/50/"
+    ],
+    "Garde Magik": [
+      "magic-guard",
+      "https://pokeapi.co/api/v2/ability/98/"
+    ],
+    "Garde Mystik": [
+      "wonder-guard",
+      "https://pokeapi.co/api/v2/ability/25/"
+    ],
+    "Garde-Ami": [
+      "friend-guard",
+      "https://pokeapi.co/api/v2/ability/132/"
+    ],
+    "Gaz Inhibiteur": [
+      "neutralizing-gas",
+      "https://pokeapi.co/api/v2/ability/256/"
+    ],
+    "Glissade": [
+      "swift-swim",
+      "https://pokeapi.co/api/v2/ability/33/"
+    ],
+    "Gloutonnerie": [
+      "gluttony",
+      "https://pokeapi.co/api/v2/ability/82/"
+    ],
+    "Glu": [
+      "sticky-hold",
+      "https://pokeapi.co/api/v2/ability/60/"
+    ],
+    "Gluco-Voile": [
+      "sweet-veil",
+      "https://pokeapi.co/api/v2/ability/175/"
+    ],
+    "Griffe Dure": [
+      "tough-claws",
+      "https://pokeapi.co/api/v2/ability/181/"
+    ],
+    "Heavy Metal": [
+      "heavy-metal",
+      "https://pokeapi.co/api/v2/ability/134/"
+    ],
+    "Herbivore": [
+      "sap-sipper",
+      "https://pokeapi.co/api/v2/ability/157/"
+    ],
+    "Homochromie": [
+      "color-change",
+      "https://pokeapi.co/api/v2/ability/16/"
+    ],
+    "Hydrata-Son": [
+      "liquid-voice",
+      "https://pokeapi.co/api/v2/ability/204/"
+    ],
+    "Hydratation": [
+      "hydration",
+      "https://pokeapi.co/api/v2/ability/93/"
+    ],
+    "Hyper Cutter": [
+      "hyper-cutter",
+      "https://pokeapi.co/api/v2/ability/52/"
+    ],
+    "Hypersommeil": [
+      "comatose",
+      "https://pokeapi.co/api/v2/ability/213/"
+    ],
+    "Ignifu-Voile": [
+      "water-veil",
+      "https://pokeapi.co/api/v2/ability/41/"
+    ],
+    "Ignifugé": [
+      "heatproof",
+      "https://pokeapi.co/api/v2/ability/85/"
+    ],
+    "Illusion": [
+      "illusion",
+      "https://pokeapi.co/api/v2/ability/149/"
+    ],
+    "Impassible": [
+      "steadfast",
+      "https://pokeapi.co/api/v2/ability/80/"
+    ],
+    "Imposteur": [
+      "imposter",
+      "https://pokeapi.co/api/v2/ability/150/"
+    ],
+    "Impudence": [
+      "moxie",
+      "https://pokeapi.co/api/v2/ability/153/"
+    ],
+    "Inconscient": [
+      "unaware",
+      "https://pokeapi.co/api/v2/ability/109/"
+    ],
+    "Infiltration": [
+      "infiltrator",
+      "https://pokeapi.co/api/v2/ability/151/"
+    ],
+    "Insomnia": [
+      "insomnia",
+      "https://pokeapi.co/api/v2/ability/15/"
+    ],
+    "Intimidation": [
+      "intimidate",
+      "https://pokeapi.co/api/v2/ability/22/"
+    ],
+    "Isograisse": [
+      "thick-fat",
+      "https://pokeapi.co/api/v2/ability/47/"
+    ],
+    "Joli Sourire": [
+      "cute-charm",
+      "https://pokeapi.co/api/v2/ability/56/"
+    ],
+    "Lame Indomptable": [
+      "intrepid-sword",
+      "https://pokeapi.co/api/v2/ability/234/"
+    ],
+    "Lavabo": [
+      "storm-drain",
+      "https://pokeapi.co/api/v2/ability/114/"
+    ],
+    "Lentiteintée": [
+      "tinted-lens",
+      "https://pokeapi.co/api/v2/ability/110/"
+    ],
+    "Libéro": [
+      "libero",
+      "https://pokeapi.co/api/v2/ability/236/"
+    ],
+    "Light Metal": [
+      "light-metal",
+      "https://pokeapi.co/api/v2/ability/135/"
+    ],
+    "Longue Portée": [
+      "long-reach",
+      "https://pokeapi.co/api/v2/ability/203/"
+    ],
+    "Lumiattirance": [
+      "illuminate",
+      "https://pokeapi.co/api/v2/ability/35/"
+    ],
+    "Lunatique": [
+      "moody",
+      "https://pokeapi.co/api/v2/ability/141/"
+    ],
+    "Lévitation": [
+      "levitate",
+      "https://pokeapi.co/api/v2/ability/26/"
+    ],
+    "Magicien": [
+      "magician",
+      "https://pokeapi.co/api/v2/ability/170/"
+    ],
+    "Magnépiège": [
+      "magnet-pull",
+      "https://pokeapi.co/api/v2/ability/42/"
+    ],
+    "Maladresse": [
+      "klutz",
+      "https://pokeapi.co/api/v2/ability/103/"
+    ],
+    "Marque Ombre": [
+      "shadow-tag",
+      "https://pokeapi.co/api/v2/ability/23/"
+    ],
+    "Matinal": [
+      "early-bird",
+      "https://pokeapi.co/api/v2/ability/48/"
+    ],
+    "Mauvais Rêve": [
+      "bad-dreams",
+      "https://pokeapi.co/api/v2/ability/123/"
+    ],
+    "Mer Primaire": [
+      "primordial-sea",
+      "https://pokeapi.co/api/v2/ability/189/"
+    ],
+    "Mimétisme": [
+      "mimicry",
+      "https://pokeapi.co/api/v2/ability/250/"
+    ],
+    "Miroir Magik": [
+      "magic-bounce",
+      "https://pokeapi.co/api/v2/ability/156/"
+    ],
+    "Mode Transe": [
+      "zen-mode",
+      "https://pokeapi.co/api/v2/ability/161/"
+    ],
+    "Moins": [
+      "minus",
+      "https://pokeapi.co/api/v2/ability/58/"
+    ],
+    "Moiteur": [
+      "damp",
+      "https://pokeapi.co/api/v2/ability/6/"
+    ],
+    "Momie": [
+      "mummy",
+      "https://pokeapi.co/api/v2/ability/152/"
+    ],
+    "Motorisé": [
+      "motor-drive",
+      "https://pokeapi.co/api/v2/ability/78/"
+    ],
+    "Mue": [
+      "shed-skin",
+      "https://pokeapi.co/api/v2/ability/61/"
+    ],
+    "Multi-Coups": [
+      "skill-link",
+      "https://pokeapi.co/api/v2/ability/92/"
+    ],
+    "Multi-Type": [
+      "multitype",
+      "https://pokeapi.co/api/v2/ability/121/"
+    ],
+    "Multiécaille": [
+      "multiscale",
+      "https://pokeapi.co/api/v2/ability/136/"
+    ],
+    "Mèche Rebelle": [
+      "tangling-hair",
+      "https://pokeapi.co/api/v2/ability/221/"
+    ],
+    "Médic Nature": [
+      "natural-cure",
+      "https://pokeapi.co/api/v2/ability/30/"
+    ],
+    "Méga Blaster": [
+      "mega-launcher",
+      "https://pokeapi.co/api/v2/ability/178/"
+    ],
+    "Métallo-Garde": [
+      "full-metal-body",
+      "https://pokeapi.co/api/v2/ability/230/"
+    ],
+    "Météo": [
+      "forecast",
+      "https://pokeapi.co/api/v2/ability/59/"
+    ],
+    "Mûrissement": [
+      "ripen",
+      "https://pokeapi.co/api/v2/ability/247/"
+    ],
+    "Nerfs d’Acier": [
+      "stalwart",
+      "https://pokeapi.co/api/v2/ability/242/"
+    ],
+    "Normalise": [
+      "normalize",
+      "https://pokeapi.co/api/v2/ability/96/"
+    ],
+    "Osmose": [
+      "power-of-alchemy",
+      "https://pokeapi.co/api/v2/ability/223/"
+    ],
+    "Osmose Équine": [
+      "as-one-glastrier",
+      "https://pokeapi.co/api/v2/ability/266/"
+    ],
+    "Paratonnerre": [
+      "lightning-rod",
+      "https://pokeapi.co/api/v2/ability/31/"
+    ],
+    "Pare-Balles": [
+      "bulletproof",
+      "https://pokeapi.co/api/v2/ability/171/"
+    ],
+    "Peau Céleste": [
+      "aerilate",
+      "https://pokeapi.co/api/v2/ability/184/"
+    ],
+    "Peau Dure": [
+      "rough-skin",
+      "https://pokeapi.co/api/v2/ability/24/"
+    ],
+    "Peau Féérique": [
+      "pixilate",
+      "https://pokeapi.co/api/v2/ability/182/"
+    ],
+    "Peau Gelée": [
+      "refrigerate",
+      "https://pokeapi.co/api/v2/ability/174/"
+    ],
+    "Peau Miracle": [
+      "wonder-skin",
+      "https://pokeapi.co/api/v2/ability/147/"
+    ],
+    "Peau Sèche": [
+      "dry-skin",
+      "https://pokeapi.co/api/v2/ability/87/"
+    ],
+    "Peau Électrique": [
+      "galvanize",
+      "https://pokeapi.co/api/v2/ability/206/"
+    ],
+    "Phobique": [
+      "rattled",
+      "https://pokeapi.co/api/v2/ability/155/"
+    ],
+    "Pickpocket": [
+      "pickpocket",
+      "https://pokeapi.co/api/v2/ability/124/"
+    ],
+    "Pied Véloce": [
+      "quick-feet",
+      "https://pokeapi.co/api/v2/ability/95/"
+    ],
+    "Pieds Confus": [
+      "tangled-feet",
+      "https://pokeapi.co/api/v2/ability/77/"
+    ],
+    "Piège Sable": [
+      "arena-trap",
+      "https://pokeapi.co/api/v2/ability/71/"
+    ],
+    "Plus": [
+      "plus",
+      "https://pokeapi.co/api/v2/ability/57/"
+    ],
+    "Poing Invisible": [
+      "unseen-fist",
+      "https://pokeapi.co/api/v2/ability/260/"
+    ],
+    "Poing de Fer": [
+      "iron-fist",
+      "https://pokeapi.co/api/v2/ability/89/"
+    ],
+    "Point Poison": [
+      "poison-point",
+      "https://pokeapi.co/api/v2/ability/38/"
+    ],
+    "Poisseux": [
+      "gooey",
+      "https://pokeapi.co/api/v2/ability/183/"
+    ],
+    "Pose Spore": [
+      "effect-spore",
+      "https://pokeapi.co/api/v2/ability/27/"
+    ],
+    "Pression": [
+      "pressure",
+      "https://pokeapi.co/api/v2/ability/46/"
+    ],
+    "Prestance Royale": [
+      "queenly-majesty",
+      "https://pokeapi.co/api/v2/ability/214/"
+    ],
+    "Prioguérison": [
+      "triage",
+      "https://pokeapi.co/api/v2/ability/205/"
+    ],
+    "Prisme-Armure": [
+      "prism-armor",
+      "https://pokeapi.co/api/v2/ability/232/"
+    ],
+    "Prognathe": [
+      "strong-jaw",
+      "https://pokeapi.co/api/v2/ability/173/"
+    ],
+    "Propulseur": [
+      "propeller-tail",
+      "https://pokeapi.co/api/v2/ability/239/"
+    ],
+    "Protéen": [
+      "protean",
+      "https://pokeapi.co/api/v2/ability/168/"
+    ],
+    "Prédiction": [
+      "forewarn",
+      "https://pokeapi.co/api/v2/ability/108/"
+    ],
+    "Puanteur": [
+      "stench",
+      "https://pokeapi.co/api/v2/ability/1/"
+    ],
+    "Punk Rock": [
+      "punk-rock",
+      "https://pokeapi.co/api/v2/ability/244/"
+    ],
+    "Querelleur": [
+      "scrappy",
+      "https://pokeapi.co/api/v2/ability/113/"
+    ],
+    "Rage Brûlure": [
+      "flare-boost",
+      "https://pokeapi.co/api/v2/ability/138/"
+    ],
+    "Rage Poison": [
+      "toxic-boost",
+      "https://pokeapi.co/api/v2/ability/137/"
+    ],
+    "Ramassage": [
+      "pickup",
+      "https://pokeapi.co/api/v2/ability/53/"
+    ],
+    "Ramasse Ball": [
+      "ball-fetch",
+      "https://pokeapi.co/api/v2/ability/237/"
+    ],
+    "Rassemblement": [
+      "power-construct",
+      "https://pokeapi.co/api/v2/ability/211/"
+    ],
+    "Receveur": [
+      "receiver",
+      "https://pokeapi.co/api/v2/ability/222/"
+    ],
+    "Regard Vif": [
+      "keen-eye",
+      "https://pokeapi.co/api/v2/ability/51/"
+    ],
+    "Repli Tactique": [
+      "emergency-exit",
+      "https://pokeapi.co/api/v2/ability/194/"
+    ],
+    "Rideau Neige": [
+      "snow-cloak",
+      "https://pokeapi.co/api/v2/ability/81/"
+    ],
+    "Rivalité": [
+      "rivalry",
+      "https://pokeapi.co/api/v2/ability/79/"
+    ],
+    "Récolte": [
+      "harvest",
+      "https://pokeapi.co/api/v2/ability/139/"
+    ],
+    "Régé-Force": [
+      "regenerator",
+      "https://pokeapi.co/api/v2/ability/144/"
+    ],
+    "Sable Humide": [
+      "water-compaction",
+      "https://pokeapi.co/api/v2/ability/195/"
+    ],
+    "Sable Volant": [
+      "sand-stream",
+      "https://pokeapi.co/api/v2/ability/45/"
+    ],
+    "Sans Limite": [
+      "sheer-force",
+      "https://pokeapi.co/api/v2/ability/125/"
+    ],
+    "Simple": [
+      "simple",
+      "https://pokeapi.co/api/v2/ability/86/"
+    ],
+    "Sniper": [
+      "sniper",
+      "https://pokeapi.co/api/v2/ability/97/"
+    ],
+    "Soin Poison": [
+      "poison-heal",
+      "https://pokeapi.co/api/v2/ability/90/"
+    ],
+    "Solide Roc": [
+      "solid-rock",
+      "https://pokeapi.co/api/v2/ability/116/"
+    ],
+    "Sombre Ruade": [
+      "grim-neigh",
+      "https://pokeapi.co/api/v2/ability/265/"
+    ],
+    "Souffle Delta": [
+      "delta-stream",
+      "https://pokeapi.co/api/v2/ability/191/"
+    ],
+    "Spectro-Bouclier": [
+      "shadow-shield",
+      "https://pokeapi.co/api/v2/ability/231/"
+    ],
+    "Statik": [
+      "static",
+      "https://pokeapi.co/api/v2/ability/9/"
+    ],
+    "Suintement": [
+      "liquid-ooze",
+      "https://pokeapi.co/api/v2/ability/64/"
+    ],
+    "Surf Caudal": [
+      "surge-surfer",
+      "https://pokeapi.co/api/v2/ability/207/"
+    ],
+    "Symbiose": [
+      "symbiosis",
+      "https://pokeapi.co/api/v2/ability/180/"
+    ],
+    "Synchro": [
+      "synchronize",
+      "https://pokeapi.co/api/v2/ability/28/"
+    ],
+    "Synergie": [
+      "battle-bond",
+      "https://pokeapi.co/api/v2/ability/210/"
+    ],
+    "Système Alpha": [
+      "rks-system",
+      "https://pokeapi.co/api/v2/ability/225/"
+    ],
+    "Sécheresse": [
+      "drought",
+      "https://pokeapi.co/api/v2/ability/70/"
+    ],
+    "Sérénité": [
+      "serene-grace",
+      "https://pokeapi.co/api/v2/ability/32/"
+    ],
+    "Technicien": [
+      "technician",
+      "https://pokeapi.co/api/v2/ability/101/"
+    ],
+    "Tempo Perso": [
+      "own-tempo",
+      "https://pokeapi.co/api/v2/ability/20/"
+    ],
+    "Tension": [
+      "unnerve",
+      "https://pokeapi.co/api/v2/ability/127/"
+    ],
+    "Terre Finale": [
+      "desolate-land",
+      "https://pokeapi.co/api/v2/ability/190/"
+    ],
+    "Tir Vif": [
+      "quick-draw",
+      "https://pokeapi.co/api/v2/ability/259/"
+    ],
+    "Toison Herbue": [
+      "grass-pelt",
+      "https://pokeapi.co/api/v2/ability/179/"
+    ],
+    "Toison Épaisse": [
+      "fur-coat",
+      "https://pokeapi.co/api/v2/ability/169/"
+    ],
+    "Torche": [
+      "flash-fire",
+      "https://pokeapi.co/api/v2/ability/18/"
+    ],
+    "Torrent": [
+      "torrent",
+      "https://pokeapi.co/api/v2/ability/67/"
+    ],
+    "Toxitouche": [
+      "poison-touch",
+      "https://pokeapi.co/api/v2/ability/143/"
+    ],
+    "Transistor": [
+      "transistor",
+      "https://pokeapi.co/api/v2/ability/262/"
+    ],
+    "Turbine": [
+      "steam-engine",
+      "https://pokeapi.co/api/v2/ability/243/"
+    ],
+    "Turbo": [
+      "speed-boost",
+      "https://pokeapi.co/api/v2/ability/3/"
+    ],
+    "Turbo Brasier": [
+      "turboblaze",
+      "https://pokeapi.co/api/v2/ability/163/"
+    ],
+    "Télécharge": [
+      "download",
+      "https://pokeapi.co/api/v2/ability/88/"
+    ],
+    "Télépathe": [
+      "telepathy",
+      "https://pokeapi.co/api/v2/ability/140/"
+    ],
+    "Téméraire": [
+      "reckless",
+      "https://pokeapi.co/api/v2/ability/120/"
+    ],
+    "Téra-Voltage": [
+      "teravolt",
+      "https://pokeapi.co/api/v2/ability/164/"
+    ],
+    "Tête de Gel": [
+      "ice-face",
+      "https://pokeapi.co/api/v2/ability/248/"
+    ],
+    "Tête de Roc": [
+      "rock-head",
+      "https://pokeapi.co/api/v2/ability/69/"
+    ],
+    "Vaccin": [
+      "immunity",
+      "https://pokeapi.co/api/v2/ability/17/"
+    ],
+    "Ventouse": [
+      "suction-cups",
+      "https://pokeapi.co/api/v2/ability/21/"
+    ],
+    "Victorieux": [
+      "victory-star",
+      "https://pokeapi.co/api/v2/ability/162/"
+    ],
+    "Voile Pastel": [
+      "pastel-veil",
+      "https://pokeapi.co/api/v2/ability/257/"
+    ],
+    "Voile Sable": [
+      "sand-veil",
+      "https://pokeapi.co/api/v2/ability/8/"
+    ],
+    "Âme Vagabonde": [
+      "wandering-spirit",
+      "https://pokeapi.co/api/v2/ability/254/"
+    ],
+    "Écaille Spéciale": [
+      "marvel-scale",
+      "https://pokeapi.co/api/v2/ability/63/"
+    ],
+    "Écailles Glacées": [
+      "ice-scales",
+      "https://pokeapi.co/api/v2/ability/246/"
+    ],
+    "Échauffement": [
+      "limber",
+      "https://pokeapi.co/api/v2/ability/7/"
+    ],
+    "Écran Fumée": [
+      "white-smoke",
+      "https://pokeapi.co/api/v2/ability/73/"
+    ],
+    "Écran Poudre": [
+      "shield-dust",
+      "https://pokeapi.co/api/v2/ability/19/"
+    ],
+    "Égide Inflexible": [
+      "dauntless-shield",
+      "https://pokeapi.co/api/v2/ability/235/"
+    ],
+    "Épine de Fer": [
+      "iron-barbs",
+      "https://pokeapi.co/api/v2/ability/160/"
+    ],
+    "Œil Composé": [
+      "compound-eyes",
+      "https://pokeapi.co/api/v2/ability/14/"
+    ]
+  }
