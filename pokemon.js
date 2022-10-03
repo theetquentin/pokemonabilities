@@ -5,94 +5,125 @@ const divPokemon = document.getElementById('ID__Pokemon');
 const api_talent = "https://pokeapi.co/api/v2/ability/?limit=266&offset=0";
 const api_pokemon = "https://pokeapi.co/api/v2/pokemon/";
 
-
+let bool = true;
+let boolKey = true;
 
 const pokemonRandom = async () => {
-    removePokemons();
-    const response = await fetch("./pokemon_fr.json");
+
+
+    const response = await fetch("./pokemon_tout.json");
     const data = await response.json();
     // console.log(data);
     var talent_fr = [];
     var url = [];
     var talent_en = [];
+    var pokemons = [];
 
     for (const item in data) {
         talent_fr.push(item);
         url.push(data[item][1]);
         talent_en.push(data[item][0]);
+        pokemons.push(data[item][2])
 
 
     }
-    var nb_talents = Object.keys(talent_fr).length;
+    // console.log(pokemons);
+
+    var nb_talents = talent_fr.length;
     // génération d'un nombre compris entre 0 et le nombre de talents
-    numero_talent = Math.floor(Math.random() * nb_talents);
+    let numero_talent = Math.floor(Math.random() * nb_talents);
     // on va prendre ce numero comme index de la liste des urls des talents
-    var url_talent = url[numero_talent];
+    // var url_talent = url[numero_talent];
     // console.log(talent_fr[numero_talent]);
     // console.log(urlTalent);
-    let counter = -1;
+    // console.log(talent_en);
 
 
-    const i = setInterval(function () {
-        counter++;
+    for (let index = 0; index < talent_fr.length; index++) {
+        // console.log(index);
 
-        // on va changer de talent jusqu'à ce que le compteur tombe sur le même numero de talent
-        // cela va créer une petite animation où le texte change en interval 
+        if (index === numero_talent) {
+            document.getElementById("talent_en").innerHTML = talent_en[index];
+            document.getElementById("talent_fr").innerHTML = talent_fr[index];
+            var url_talent = url[index];
 
-        document.getElementById("talent_en").innerHTML = talent_en[counter];
-        document.getElementById("talent_fr").innerHTML = talent_fr[counter];
-        // console.log(counter);
+            // console.log(url_talent);
 
-        if (counter === numero_talent) {
-            clearInterval(i);
-            const pokemons_desc = async () => {
-                var poke_desc = await pokemonDesc(url_talent);
 
-                document.getElementById("description").innerHTML = poke_desc[0];
-                var pokemons = poke_desc[2];
-                for (let index = 0; index < pokemons.length; index++) {
-                    const poke_card = pokemons[index];
-                    // console.log(poke_card);
+            var poke_desc = await pokemonDesc(url_talent);
 
-                    await creationPokes(poke_card);
 
-                }
+            document.getElementById("description").innerHTML = poke_desc[0];
+
+            const value = pokemons[index];
+
+            const promises = value.map(async pokemon => {
+                // console.log(pokemon);
+                // console.log(pokemon.pokemon);
+                var poke_card = pokemon.pokemon.name;
+                var url = pokemon.pokemon.url;
+                return creationPokes(poke_card, url);
+            });
+            return Promise.all(promises).then(() => {
                 exception();
-            }
-            pokemons_desc();
-        }
-    }, 10);
+                return 'Ok';
+            });
 
+
+            // setTimeout(() => {
+            //     for (let index2 = 0; index2 < pokemons.length; index2++) {
+            //         const poke_card = pokemons[index2];
+            //         console.log(poke_card);
+
+            //         // creationPokes(poke_card);
+
+
+            //     }
+            // }, 1000);
+
+
+        }
+
+    }
+
+
+    // on va changer de talent jusqu'à ce que le compteur tombe sur le même numero de talent
+    // cela va créer une petite animation où le texte change en interval
+
+
+    // console.log(counter);
 
 };
 
+// const pokemonAbilities2 = async () => {
+//     const response = await fetch(api_talent);
+//     const data = await response.json();
 
 
-const pokemonAbilities2 = async () => {
-    const response = await fetch(api_talent);
-    const data = await response.json();
+//     var all = [];
+//     for (const item in data.results) {
+//         all.push(data.results[item]);
+//         // let talent = data.results[item]
+//         // tableau.push(talent.name);
+//         // tableauDesc.push(talent.url);
+//     }
+//     // var nbTalents = Object.keys(tableau).length;
+//     return await all;
+// }
 
 
-    var all = [];
-    for (const item in data.results) {
-        all.push(data.results[item]);
-        // let talent = data.results[item]
-        // tableau.push(talent.name);
-        // tableauDesc.push(talent.url);
-    }
-    // var nbTalents = Object.keys(tableau).length;
-    return await all;
-}
+document.getElementById('random').addEventListener('click', () => {
 
+    if (!bool) return;
 
+    bool = false;
 
+    removePokemons().then(() => {
+        pokemonRandom().then(() => bool = true).catch(() => bool = true);
+    });
 
-random.onclick = () => {
-    divPokemon.innerHTML = '';
-    removePokemons();
-    pokemonRandom();
+});
 
-}
 
 var Recherche = "";
 let input = document.getElementById("cherche");
@@ -101,27 +132,31 @@ async function displayNames(value) {
 
     removeTalents();
     removePokemons();
-    nom_et_url = value.split(',');
+    let nom_et_url = value.split('$$$');
     // console.log(value);
     input.value = nom_et_url[0];
     document.getElementById("talent_en").innerHTML = nom_et_url[1];
 
+
+    const pokemons = JSON.parse(nom_et_url[3]);
+    console.log(pokemons);
     var poke_talent_desc = await pokemonDesc(nom_et_url[2]);
     // console.log(poke_talent_desc);
     document.getElementById("description").innerHTML = poke_talent_desc[0];
     document.getElementById("talent_fr").innerHTML = poke_talent_desc[1];
 
 
-    var nom_poke = poke_talent_desc[2];
-    for (let index = 0; index < nom_poke.length; index++) {
-        const poke_card = nom_poke[index];
-
-        await creationPokes(poke_card);
+    // var nom_poke = poke_talent_desc[2];
+    for (let index = 0; index < pokemons.length; index++) {
+        const poke_card = pokemons[index].pokemon.name;
+        // console.log(poke_card);
+        // console.log(pokemons[index].pokemon.url)
+        const poke_url = pokemons[index].pokemon.url;
+        await creationPokes(poke_card, poke_url);
 
     }
     exception();
 }
-
 
 
 // async function DictionnaireFrançais() {
@@ -183,12 +218,11 @@ async function displayNames(value) {
 
 async function autoComplete() {
 
-
     document.addEventListener("keyup", async (e) => {
         // console.log(e.key);
         removeTalents();
-        removePokemons();
-        const response = await fetch("./pokemon_fr.json");
+
+        const response = await fetch("./pokemon_tout.json");
         const data = await response.json();
         // console.log(data);
 
@@ -196,6 +230,7 @@ async function autoComplete() {
             talent_fr = item;
             url = data[item][1];
             talent_en = data[item][0];
+            pokemon = data[item][2];
 
 
             if (
@@ -207,7 +242,7 @@ async function autoComplete() {
                 //One common class name
                 listItem.classList.add("list-items");
                 listItem.style.cursor = "pointer";
-                listItem.setAttribute("onclick", "displayNames('" + [talent_fr, talent_en, url] + "')");
+                listItem.setAttribute("onclick", "displayNames('" + [talent_fr, talent_en, url, JSON.stringify(pokemon)].join('$$$') + "')");
                 //Display matched part in bold
                 let word = "<b>" + talent_fr.substr(0, input.value.length) + "</b>";
                 word += talent_fr.substr(input.value.length);
@@ -222,46 +257,48 @@ async function autoComplete() {
     });
 
 }
-autoComplete();
 
+autoComplete();
 
 
 async function search(ele) {
 
-
-    if (event.key === 'Enter') {
-        removePokemons();
+    if (event.key === 'Enter' && boolKey) {
+        boolKey = false;
+        await removePokemons();
         divPokemon.innerHTML = '';
         Recherche = ele.value;
-        const response = await fetch("./pokemon_fr.json");
+        const response = await fetch("./pokemon_tout.json");
         const data = await response.json();
         // console.log(data);
 
         for (const item in data) {
-            var talent_fr=item;
-            var url=data[item][1];
-            var talent_en=data[item][0];
+            var talent_fr = item;
+            var url = data[item][1];
+            var talent_en = data[item][0];
             var poke_talent_desc = await pokemonDesc(url);
             var desc_fr = poke_talent_desc[0];
             var nom_poke = poke_talent_desc[2];
+            var pokemons = data[item][2];
 
             if ((talent_en.toLowerCase() == Recherche.toLowerCase()) || talent_fr.toLowerCase() == Recherche.toLowerCase()) {
                 document.getElementById("talent_en").innerHTML = talent_en;
                 document.getElementById("talent_fr").innerHTML = talent_fr;
                 document.getElementById("description").innerHTML = desc_fr;
 
-                for (let index = 0; index < nom_poke.length; index++) {
-                    const poke_card = nom_poke[index];
-
-                    await creationPokes(poke_card);
+                for (let index = 0; index < pokemons.length; index++) {
+                    await creationPokes(pokemons[index].pokemon.name, pokemons[index].pokemon.url);
                 }
+
+                exception();
+
+                removeTalents();
+
+                boolKey = true;
             }
         }
 
     }
-    removeTalents();
-
-    exception();
 
 
 }

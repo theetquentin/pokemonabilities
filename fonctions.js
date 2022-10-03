@@ -32,31 +32,42 @@ const pokemonDesc = async (urlTalent) => {
 }
 
 const pokemonFR = async (nomPoke) => {
-    const response = await fetch("https://pokeapi.co/api/v2/pokemon-species/" + nomPoke);
-    const data = await response.json();
     var nomFR = [];
-    for (const item in data.names) {
-        let pokemonFR = data.names[item]["language"];
-        if (pokemonFR.name == "fr") {
-            nomFR.push(data.names[item].name);
-        }
-
+    // console.log(nomPoke);
+    if (nomPoke.includes("mr-mime-galar")) {
+        nomFR = "M. Mime de Galar";
     }
+    else {
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon-species/" + nomPoke);
+        const data = await response.json();
+
+        for (const item in data.names) {
+            let pokemonFR = data.names[item]["language"];
+            if (pokemonFR.name == "fr") {
+                nomFR.push(data.names[item].name);
+            }
+
+        }
+    }
+
     return await nomFR;
 }
 
 
-async function spritePokemon(new_sprite, nom_poke) {
-    var pokemon = api_pokemon + nom_poke;
-    const response = await fetch(pokemon);
+async function spritePokemon(url) {
+    // var pokemon = api_pokemon + nom_poke;
+    const response = await fetch(url);
     const data = await response.json();
     sprite = data["sprites"]["other"]["official-artwork"].front_default;
 
-    new_sprite.src = sprite;
+    return sprite;
 
 }
 
-async function creationPokes(poke_card){
+
+
+async function creationPokes(poke_card, url) {
+    //creation de la card
     let card = document.createElement("div");
     card.classList.add("list-pokemons");
     card.classList.add("card");
@@ -68,56 +79,83 @@ async function creationPokes(poke_card){
     card.classList.add("m-2");
     card.classList.add("bg-light");
     card.classList.add("bg-opacity-25");
-    let newPokemon = document.createElement("div");
-    newPokemon.classList.add("card-header");
 
-    newPokemon.classList.add("text-center");
 
+    // on rajoute un id avec le nom du pokemon en anglais 
+    // pour supprimer les éléments gênants plus tard
     card.setAttribute("id", poke_card);
 
     var regex = /-(.*)/;
-    nomPoke2 = poke_card;
+    var regex2 = /-(.*)-(.*)/;
+    pas_suffixe_prefixe = poke_card;
     var suffixePoke = "";
-    // console.log(poke_card);
 
-    if (poke_card.includes("tapu") || poke_card.includes("nidoran-f") || poke_card.includes("nidoran-m")) {
-        // console.log(poke_card);
 
+    if (poke_card.includes("ho-oh") || poke_card.includes("mr-") || poke_card.includes("mime") || poke_card.includes("tapu") || poke_card.includes("nidoran-f") || poke_card.includes("nidoran-m")) {
+        // certains pokémons ont des '-' dans leurs noms, ce ne sont pas des suffixes, 
+        // si on les enlèves il n'y aura pas tout le nom donc le fetch produira une erreur.
     }
     else if (poke_card.match(regex)) {
-        var reg = nomPoke2.match(regex);
+        //on enlève le suffixe de chaque pokémon, comme les formes, méga évolution...
+        var reg = pas_suffixe_prefixe.match(regex);
         suffixePoke = reg[1];
-
-        nomPoke2 = poke_card.replace(regex, "");
+        // on stock dans une autre variable pour avoir le nom sans forme en français
+        pas_suffixe_prefixe = poke_card.replace(regex, "");
     }
 
-    var nom_fr = await pokemonFR(nomPoke2);
-
-
-    let new_sprite = document.createElement("img");
-
-    new_sprite.src = spritePokemon(new_sprite, poke_card);
-
-    newPokemon.innerHTML += nom_fr;
+    var nom_fr = await pokemonFR(pas_suffixe_prefixe);
 
 
 
-    let lien = document.createElement("a");
+    // s'il y a une forme, on vérifie avec le nom anglais 
+    // pour rajouter avec les différentes url compatible avec pokepedia
+    if (poke_card.includes("alola")) {
+        nom_fr = nom_fr + " d'Alola";
+    }
 
-    lien.href = "https://www.pokepedia.fr/" + nom_fr
+    if (poke_card.includes("-primal")) {
+        nom_fr = "Primo-" + nom_fr
+    }
 
-    lien.target = "_blank";
+    if (poke_card.includes("gmax")) {
+        nom_fr = nom_fr + " Gigamax";
+    }
+    if (poke_card.includes("-mega-")) {
+        var reg = poke_card.match(regex2)
+        // deux formes de méga x ou y, on doit les mettre en majuscule
+        // pour que l'url pokepedia fonctionne
+        prefixePoke = reg[2].toUpperCase()
+
+        nom_fr = "Méga-" + nom_fr + " " + preffixePoke;
+
+    }
+    else if (poke_card.includes("-mega")) {
+        nom_fr = "Méga-" + nom_fr;
+    }
 
 
-    new_sprite.classList.add("card-img-bottom");
+    if(poke_card.includes("mr-mime-galar")){
+
+    }
+    else if (poke_card.includes("galar") || poke_card.includes("hisui")) {
+        var reg = poke_card.match(regex);
+        // on va mettre en majuscule la première lettre de galar ou hisui
+        suffixePoke = reg[1].charAt(0).toUpperCase() + reg[1].slice(1);
+
+        nom_fr = nom_fr + " de " + suffixePoke;
+    }
+
+    let sprite = await spritePokemon(url);
+
+
+    card.innerHTML = `<div class="card-header text-center">${nom_fr}</div>
+    <a href="https://www.pokepedia.fr/${nom_fr}" target="_blank"><img src="${sprite}" class="card-img-bottom"></a>`
+
 
     divPokemon.appendChild(card);
-    card.appendChild(newPokemon);
-    card.appendChild(lien);
-    lien.appendChild(new_sprite);
 
-    
-    
+    return Promise.resolve();
+
 }
 
 async function removeTalents() {
@@ -129,38 +167,37 @@ async function removeTalents() {
 }
 async function removePokemons() {
 
-    let pokemons = document.querySelectorAll(".list-pokemons");
-    pokemons.forEach((item) => {
-        item.remove();
-    });
+    return new Promise(resolve => {
+        let list_pokemons = document.querySelectorAll(".list-pokemons");
+        const lengthCopy = list_pokemons.length - 1;
+        if (lengthCopy <= 0) resolve('ok');
+        // while(list_pokemons.length>0){
+        //     list_pokemons[0].remove();
+        // }
+
+        list_pokemons.forEach((item, index) => {
+            item.remove();
+            if (index === lengthCopy)
+                resolve('ok');
+        });
+    })
 
 }
 
-function exception(){
-    var regex = /-(.*)/;
-    var suffixePoke = "";
-    var blacklist = ["-origin","totem", "gorging", "gulping", "starter", "female", "male", "eternal", "small", "large", "super", "cosplay","busted"];
-    var forms = ["-mega", "-gmax", "-hisui", "-alola", "galar"];
-    let pokemons = document.querySelectorAll(".list-pokemons");
+function exception() {
+
+    var blacklist = ["minior", "-defense", "-attack", "-speed", "-eternamax", "-origin", "totem", "gorging", "gulping", "starter", "female", "male", "eternal", "small", "large", "super", "cosplay", "busted"];
+    let list_pokemons = document.querySelectorAll(".list-pokemons");
     // console.log(pokemons);
-    pokemons.forEach((item) => {
+    list_pokemons.forEach((item) => {
         for (let index = 0; index < blacklist.length; index++) {
             const element = blacklist[index];
             // console.log(element);
-            if (item.outerHTML.includes(element)) {
-                item.remove();
+            if (item.outerHTML.includes("minior-red")) {
+
             }
-
-        }
-        for (let index = 0; index < forms.length; index++) {
-            const element = forms[index];
-
-            if (item.outerHTML.includes(element)) {
-                var nom = item.id;
-                // console.log(nom);
-                var reg = nom.match(regex);
-                suffixePoke = reg[1];
-                item.children[0].innerHTML = suffixePoke + " " + item.children[0].innerHTML;
+            else if (item.outerHTML.includes(element)) {
+                item.remove();
             }
         }
     });
