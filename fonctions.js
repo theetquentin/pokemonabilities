@@ -124,7 +124,7 @@ async function creationPokes(poke_card, url) {
         var reg = poke_card.match(regex2)
         // deux formes de méga x ou y, on doit les mettre en majuscule
         // pour que l'url pokepedia fonctionne
-        prefixePoke = reg[2].toUpperCase()
+        var preffixePoke = reg[2].toUpperCase()
 
         nom_fr = "Méga-" + nom_fr + " " + preffixePoke;
 

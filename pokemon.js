@@ -265,7 +265,7 @@ async function search(ele) {
 
     if (event.key === 'Enter' && boolKey) {
         boolKey = false;
-        await removePokemons();
+        removePokemons();
         divPokemon.innerHTML = '';
         Recherche = ele.value;
         const response = await fetch("./pokemon_tout.json");
