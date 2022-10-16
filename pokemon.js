@@ -2,6 +2,7 @@ let myApp = document.querySelector('#App');
 
 const divPokemon = document.getElementById('ID__Pokemon');
 
+
 const api_talent = "https://pokeapi.co/api/v2/ability/?limit=266&offset=0";
 const api_pokemon = "https://pokeapi.co/api/v2/pokemon/";
 
@@ -32,11 +33,6 @@ const pokemonRandom = async () => {
     var nb_talents = talent_fr.length;
     // génération d'un nombre compris entre 0 et le nombre de talents
     let numero_talent = Math.floor(Math.random() * nb_talents);
-    // on va prendre ce numero comme index de la liste des urls des talents
-    // var url_talent = url[numero_talent];
-    // console.log(talent_fr[numero_talent]);
-    // console.log(urlTalent);
-    // console.log(talent_en);
 
 
     for (let index = 0; index < talent_fr.length; index++) {
@@ -69,47 +65,9 @@ const pokemonRandom = async () => {
                 return 'Ok';
             });
 
-
-            // setTimeout(() => {
-            //     for (let index2 = 0; index2 < pokemons.length; index2++) {
-            //         const poke_card = pokemons[index2];
-            //         console.log(poke_card);
-
-            //         // creationPokes(poke_card);
-
-
-            //     }
-            // }, 1000);
-
-
         }
-
     }
-
-
-    // on va changer de talent jusqu'à ce que le compteur tombe sur le même numero de talent
-    // cela va créer une petite animation où le texte change en interval
-
-
-    // console.log(counter);
-
 };
-
-// const pokemonAbilities2 = async () => {
-//     const response = await fetch(api_talent);
-//     const data = await response.json();
-
-
-//     var all = [];
-//     for (const item in data.results) {
-//         all.push(data.results[item]);
-//         // let talent = data.results[item]
-//         // tableau.push(talent.name);
-//         // tableauDesc.push(talent.url);
-//     }
-//     // var nbTalents = Object.keys(tableau).length;
-//     return await all;
-// }
 
 
 document.getElementById('random').addEventListener('click', () => {
@@ -124,9 +82,8 @@ document.getElementById('random').addEventListener('click', () => {
 
 });
 
-
 var Recherche = "";
-let input = document.getElementById("cherche");
+
 
 async function displayNames(value) {
 
@@ -158,64 +115,6 @@ async function displayNames(value) {
     exception();
 }
 
-
-// async function DictionnaireFrançais() {
-//     var nom_et_url = await pokemonAbilities2();
-//     var nom_url = new Map();
-//     var fr = new Map();
-//     var tout = new Map();
-//     var test = [];
-//     compte=0;
-//     for (let index = 0; index < nom_et_url.length; index++) {
-//         nom_url.set(nom_et_url[index].name, nom_et_url[index].url);
-//     }
-
-
-//     for (var [key, value] of nom_url) {
-//         const response = await fetch(value);
-//         const data = await response.json();
-
-//         // console.log(key);
-
-//         if (key == data.name) {
-//             // console.log("pareil", value[0]);
-
-//             test.push(data.pokemon);
-
-
-//         }
-
-//         for (const item in data.names) {
-
-//             if (data.names[item]["language"].name == "fr") {
-//                 fr.set(data.names[item].name, [key, value,test[compte]]);
-//                 compte++;
-//             }
-//         }
-//     }
-//     // console.log(nom_et_url);
-//     // console.log(nom_url);
-//     // console.log(fr);
-//     // console.log(test);
-//     // console.log(tout);
-//     // // console.log(pokemons);
-//     // // console.log(fr);
-
-
-//         console.dir(fr);
-//         const obj = Object.fromEntries(fr);
-//         console.log(obj)
-
-//         var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
-//         var downloadAnchorNode = document.createElement('a');
-//         downloadAnchorNode.setAttribute("href", dataStr);
-//         downloadAnchorNode.setAttribute("download", "pokemon_fr.json");
-//         document.body.appendChild(downloadAnchorNode); // required for firefox
-//         downloadAnchorNode.click();
-//         downloadAnchorNode.remove();
-// }
-// DictionnaireFrançais();
-
 async function autoComplete() {
 
     document.addEventListener("keyup", async (e) => {
@@ -241,6 +140,8 @@ async function autoComplete() {
                 let listItem = document.createElement("li");
                 //One common class name
                 listItem.classList.add("list-items");
+                listItem.classList.add("list-white");
+                if(jour==false) listItem.classList.replace("list-white","list-black");
                 listItem.style.cursor = "pointer";
                 listItem.setAttribute("onclick", "displayNames('" + [talent_fr, talent_en, url, JSON.stringify(pokemon)].join('$$$') + "')");
                 //Display matched part in bold

@@ -1,7 +1,14 @@
+
+var nuitJour = document.getElementById("nuitJour");
+let input = document.getElementById("cherche");
+var box = document.getElementById("box");
+// booléen qui va nous permettre de déterminer si on est en mode clair ou sombre
+// de base en mode clair
+let jour = true;
+
 const pokemonDesc = async (urlTalent) => {
     const response = await fetch(urlTalent);
     const data = await response.json();
-
     var desc = "";
     talent_fr = "";
     var nomPokes = [];
@@ -64,8 +71,6 @@ async function spritePokemon(url) {
 
 }
 
-
-
 async function creationPokes(poke_card, url) {
     //creation de la card
     let card = document.createElement("div");
@@ -77,7 +82,10 @@ async function creationPokes(poke_card, url) {
     card.classList.add("col-8");
     card.classList.add("p-0");
     card.classList.add("m-2");
-    card.classList.add("bg-light");
+    card.classList.add("bg-light")
+    
+    if (jour == false) card.classList.replace("bg-light", "bg-dark");
+    
     card.classList.add("bg-opacity-25");
 
 
@@ -89,7 +97,6 @@ async function creationPokes(poke_card, url) {
     var regex2 = /-(.*)-(.*)/;
     pas_suffixe_prefixe = poke_card;
     var suffixePoke = "";
-
 
     if (poke_card.includes("ho-oh") || poke_card.includes("mr-") || poke_card.includes("mime") || poke_card.includes("tapu") || poke_card.includes("nidoran-f") || poke_card.includes("nidoran-m")) {
         // certains pokémons ont des '-' dans leurs noms, ce ne sont pas des suffixes, 
@@ -104,8 +111,6 @@ async function creationPokes(poke_card, url) {
     }
 
     var nom_fr = await pokemonFR(pas_suffixe_prefixe);
-
-
 
     // s'il y a une forme, on vérifie avec le nom anglais 
     // pour rajouter avec les différentes url compatible avec pokepedia
@@ -133,8 +138,7 @@ async function creationPokes(poke_card, url) {
         nom_fr = "Méga-" + nom_fr;
     }
 
-
-    if(poke_card.includes("mr-mime-galar")){
+    if (poke_card.includes("mr-mime-galar")) {
 
     }
     else if (poke_card.includes("galar") || poke_card.includes("hisui")) {
@@ -148,7 +152,7 @@ async function creationPokes(poke_card, url) {
     let sprite = await spritePokemon(url);
 
 
-    card.innerHTML = `<div class="card-header text-center">${nom_fr}</div>
+    card.innerHTML = `<div class="card-header ${jour == true ? "text-dark" : "text-light"} text-center">${nom_fr}</div>
     <a href="https://www.pokepedia.fr/${nom_fr}" target="_blank"><img src="${sprite}" class="card-img-bottom"></a>`
 
 
@@ -165,6 +169,78 @@ async function removeTalents() {
         item.remove();
     });
 }
+
+// rajout d'un événement click sur l'icône font awesome
+nuitJour.addEventListener('click', () => {
+    // si on a cliqué sur l'icône lune alors on passe en mode sombre
+    if (nuitJour.classList.contains("fa-moon")) {
+        nuitJour.classList.replace("fa-moon", "fa-sun");
+        nuitJour.classList.add("text-warning");
+        document.getElementById("titre").classList.replace("text-dark", "text-light");
+        random.classList.replace("btn-light", "btn-dark");
+        input.style.backgroundColor = "#212529";
+        document.getElementById("liste").style.backgroundColor = "#212529";
+        document.getElementById("liste").classList.replace("text-dark", "text-light");
+        input.classList.replace("text-dark", "text-light");
+        box.src = "./images/box_dark.png";
+        document.getElementById("description").classList.replace("text-dark", "text-light");
+
+        
+        var talents = document.getElementById("liste").children;
+        // on va changer la couleur du hover (quand on survole les talents), 
+        // ici vu que l'on passe en mode sombre --> on change la classe css pour la mettre en noire
+        for (let index = 0; index < talents.length; index++) {
+            const element = talents[index];
+            element.classList.replace("list-white", "list-black");
+        }
+        // on sélectionne les cards des pokémons
+        // et on change la texte en blanc et la card en noire
+        let list_pokemons = document.querySelectorAll(".list-pokemons");
+        list_pokemons.forEach(element => {
+            element.classList.replace("bg-light", "bg-dark");
+            element.children[0].classList.replace("text-dark", "text-light");
+
+        });
+        document.body.style.backgroundImage = "url('./images/nuit.jpeg')";
+        jour = false; // on est passé en mode sombre
+    // si on a cliqué sur l'icône soleil alors on passe en mode clair
+    } else if (nuitJour.classList.contains("fa-sun")) {
+        nuitJour.classList.replace("fa-sun", "fa-moon");
+        nuitJour.classList.remove("text-warning");
+        document.getElementById("titre").classList.replace("text-light", "text-dark");
+        random.classList.replace("btn-dark", "btn-light");
+        input.style.backgroundColor = "white";
+        document.getElementById("liste").style.backgroundColor = "white";
+        document.getElementById("liste").classList.replace("text-light", "text-dark");
+        input.classList.replace("text-light", "text-dark");
+        document.getElementById("description").classList.replace("text-light", "text-dark");
+        box.src = "./images/box.png";
+
+        // on va changer la couleur du hover (quand on survole les talents), 
+        // ici vu que l'on passe en mode clair --> on change la classe css pour la mettre en blanche
+        var talents = document.getElementById("liste").children;
+        for (let index = 0; index < talents.length; index++) {
+            const element = talents[index];
+            element.classList.replace("list-black", "list-white");
+        }
+
+        // on sélectionne les cards des pokémons
+        // et on change la texte en noir et la card en blanche
+        let list_pokemons = document.querySelectorAll(".list-pokemons");
+        list_pokemons.forEach(element => {
+            element.classList.replace("bg-dark", "bg-light");
+            element.children[0].classList.replace("text-light", "text-dark");
+        });
+
+        document.body.style.backgroundImage = "url('./images/jour.jpeg')";
+
+        jour=true; // on est passé en mode clair
+    }
+});
+
+
+
+
 async function removePokemons() {
 
     return new Promise(resolve => {
@@ -186,7 +262,7 @@ async function removePokemons() {
 
 function exception() {
 
-    var blacklist = ["minior", "-defense", "-attack", "-speed", "-eternamax", "-origin", "totem", "gorging", "gulping", "starter", "female", "male", "eternal", "small", "large", "super", "cosplay", "busted"];
+    var blacklist = ["minior", "-defense", "-attack", "-speed", "-eternamax", "-origin", "totem", "gorging", "gulping", "starter", "eternal", "small", "large", "super", "cosplay", "busted"];
     let list_pokemons = document.querySelectorAll(".list-pokemons");
     // console.log(pokemons);
     list_pokemons.forEach((item) => {

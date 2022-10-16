@@ -10,22 +10,27 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="//db.onlinewebfonts.com/c/900f8add35323c44ee840c611ed9a7a5?family=Pokemon+Classic" rel="stylesheet"
         type="text/css" />
-
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Talent pokémon</title>
 
 </head>
 
-<body class="bg-image bg-opacity-25" style="background-image: url('./images/background.jpg');
+<body class="bg-image bg-opacity-25" style="background-image: url('./images/jour.jpeg');
  background-repeat: no-repeat; background-attachment: fixed; background-size:cover; background-position:0px;">
+    <i class="fa-solid fa-moon fa-2x mx-4 mt-4" id="nuitJour" type="button"></i>
     <div class="row m-2">
-        <img src="./images/pokeball.png" alt="" class="img-fluid  offset-lg-3 col-lg-1 offset-sm-3 col-sm-2 offset-1 col-4">
-        <h4 id="titre" class="col-lg-6 col-4 text-center my-auto fw-bold">Talent Pokémon aléatoire ou recherche</h1>
+        <img src="./images/pokeball.png" alt=""
+            class="img-fluid  offset-lg-3 col-lg-1 offset-sm-3 col-sm-2 offset-1 col-4">
+        <h4 id="titre" class="col-lg-6 col-4 text-dark text-center my-auto fw-bold">Talent Pokémon aléatoire ou
+            recherche</h1>
     </div>
     <div id="App">
         <div class="container">
             <div class="row">
                 <button onclick="" type="button" id="random" class="btn btn-light offset-2 col-2 ">Random</button>
-                <input type="text" class="ms-2 col-6" id="cherche" placeholder="Talent du pokemon..."
+                <input type="text" class="ms-2 col-6 text-dark" id="cherche" placeholder="Talent du pokemon..."
                     onkeydown="search(this)" />
 
                 <!-- <input type="text" class="form-control" placeholder="Recherche Talent" aria-label="Recherche Talent"
@@ -35,10 +40,10 @@
 
 
             </div>
-            <ul class="list  col-6"></ul>
+            <ul class="list text-dark col-6" id="liste"></ul>
 
             <div class="card mt-2 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-                <img src="./images/box.png" class="" alt="...">
+                <img src="./images/box.png" class="" id="box" alt="...">
                 <div class="card-img-overlay">
                     <div class="row">
                         <img class="img-fluid col-lg-1 offset-lg-3 col-1 offset-1 mt-lg-4 mt-md-3 mt-sm-3 mt-2"
@@ -46,10 +51,11 @@
                         <h5 id="talent_en" class="card-title text-danger col mt-lg-4 mt-md-2 mt-md-3 mt-sm-3 mt-2"></h5>
                     </div>
                     <div class="row">
-                        <img class="img-fluid col-lg-1 offset-lg-3 col-1 offset-1 mt-lg-2 " src="./images/fr_flag.png" alt="">
+                        <img class="img-fluid col-lg-1 offset-lg-3 col-1 offset-1 mt-lg-2 " src="./images/fr_flag.png"
+                            alt="">
                         <h5 id="talent_fr" class="card-title text-info col mt-lg-2 mt-md-1"></h5>
                     </div>
-                    <p id="description" class="card-text mx-5"></p>
+                    <p id="description" class="card-text mx-5 text-dark"></p>
 
                 </div>
             </div>

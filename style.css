@@ -37,8 +37,12 @@ ul {
 
 }
 
-.list-items:hover {
+.list-white:hover {
     background-color: #dddddd;
+}
+
+.list-black:hover {
+    background-color: #3c4146;
 }
 
 
