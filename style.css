@@ -47,14 +47,20 @@ ul {
 
 
 @media (max-width: 768px) {
+    body{
+        background-attachment: scroll;
+    }
     h4{
         font-size: 1.2rem !important;
     }
     h5 {
         font-size: 1rem !important;
     }
-    button,input,.list-items,p {
-        font-size: 0.65rem !important;
+    input,.list-items,p {
+        font-size: 0.5rem !important;
+    }
+    button{
+        font-size:0.4rem!important;
     }
 
 }
